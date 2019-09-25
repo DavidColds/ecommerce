@@ -73,4 +73,3 @@ def register(request):
 
     args = {'user_form': user_form}
     return render(request, 'register.html', args)
-
