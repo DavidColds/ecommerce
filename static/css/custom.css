@@ -1,66 +1,82 @@
-body {
-    font-family: Arial;
-    padding-top: 100px;
+@import url('https://fonts.googleapis.com/css?family=Simonetta:500,600,700,800');
+
+body, html {
+    font-family: 'Simonetta', sans-serif;
+    background-color: #D8D9CC; 
 }
 
-footer {
-    margin-top: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-top: 1px solid #ededed;
-    color: #A9A9A9;
-}
-
-.icon-bar {
-    background-color: #fff;
-}
-
-.accountform {
-    padding-top: 20px;
-}
-
-.badge {
-    padding-left: 9px;
-    padding-right: 9px;
-    -webkit-border-radius: 9px;
-    -moz-border-radius: 9px;
-    border-radius: 9px;
-}
-
-.label-warning[href],
-.badge-warning[href] {
-    background-color: #c67605;
-}
-
-.product {
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
+.col-centered{
+    float: none;
     margin: 0 auto;
 }
 
-caption p {
-    word-wrap: break-word;
+.messages li {
+    list-style-type: none;
 }
 
-.row.row-flex {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
+.messages ul li {
+    list-style-type: none;
 }
 
-.panel-default {
-    border-color: transparent;
-    padding: 0 10px;
+/*------------LOGO--------------*/
+
+.main-header {
+    background: #273940;  
 }
 
-.panel-body {
-    height: 100%;
-    border: 1px solid #ddd;
+
+
+/*------------NAVBAR--------------*/
+
+ .navbar {
+     background: #273940;
+     font-family: "Simonetta";
+     margin-bottom: 0px;
+     font-size: 19px;
+
+ }
+ .contariner-logo {
+     background: #273940;
+ }
+ .logo--main {
+
+    background: #273940;
+  }
+
+
+ #navbar10 {
+     padding: 0%;
+ }
+
+ .navbar li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 19px;
+  }
+
+  
+/*------------SLIDER--------------*/
+
+.carousel-item {
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
 }
 
-.product-description {
-    min-height: 40px;
+
+
+ /*------------Media Queries--------------*/
+
+
+@media screen and (max-width: 767px) {
+    #myFooter {
+        text-align: center;
+    }
+    
+    .card {
+        width: 100%;
+    }
+    
+    
 }
+
