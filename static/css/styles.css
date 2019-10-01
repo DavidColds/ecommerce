@@ -1,0 +1,509 @@
+
+@import url('https://fonts.googleapis.com/css?family=Simonetta:100,200,300,400,500,600,700,800');
+
+body, html {
+    font-family: 'Simonetta', sans-serif;
+    background-color:fff; 
+    scroll-behavior: smooth;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.messages li {
+    list-style-type: none;
+}
+
+.messages ul li {
+    list-style-type: none;
+}
+
+/*   Age PopUp ----------------------------------- */
+
+
+.decor-line {
+    position:	relative;
+    top:	0.7em;
+  border-top: 1px solid #ccc;
+  text-align:center;
+  max-width: 30%;
+  margin: 0.5em auto;
+  display: block;
+  padding: 0.1em 1em;
+  color: #ccc;
+}
+.decor-line .span {
+    background: #fff;
+    color: #ccc;
+    position: relative;
+    top: -.7em;
+    padding: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight:	900;
+}
+
+.overlay-verify{
+    position:fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+;
+
+  }
+
+  
+.box{
+    background: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    bottom: 0;
+    margin: 0 auto;
+    z-index: 9;
+    width: 50%;
+    height: 40%;
+    display:table;
+    z-index: 1;
+    background-color: rgba(0,0,0,.8);
+ }
+
+.box .box-left {
+    background:url("/static/img/box.jpg") 50% 50%;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding: 5%;
+}
+
+@media (min-width: 54em) {
+    .box .box-left, .box .box-right {
+        display: table-cell;
+        vertical-align: middle;
+        width: 50%;
+    } 
+    }
+
+.box .img {
+    position: relative;
+    z-index: 4;
+    width: 9em;
+}
+
+.box .box-right {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding: 5%;
+}
+
+.box .box-right .btn {
+    background-color: #54A984;
+
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    padding: 0.9em 1em 0.7em;
+    margin: 1em auto;
+    display: block;
+}
+.box .box-right .btn-beta{
+    text-align: center;
+    background-color: #e36e3a;
+    
+}
+
+.box .box-right h3 {
+    color: #555;
+		  text-transform: uppercase;
+		  letter-spacing: 0.07em;
+		  border-bottom: 1px solid #eee;
+		  padding-bottom: 1em;
+		  margin: 0 auto;
+}
+
+.box-right .btn {
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    padding: 0.9em 1em 0.7em;
+    margin: 1em auto;
+    display: block;
+}
+
+.box-right small {
+    color: #ccc;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    padding: 0.9em 1em 0.7em;
+    margin: 1em auto;
+    display: block;
+}
+
+
+
+
+
+
+
+/*   Navbar ----------------------------------- */
+
+.navbar {
+    background: #273940;
+    font-family: 'Simonetta', sans-serif;
+    margin-bottom: 0px;
+    font-size: 19px;
+
+}
+.contariner-logo {
+    background: #273940;
+}
+.logo--main {
+
+   background: #273940;
+ }
+
+
+#navbar10 {
+    padding: 0%;
+}
+
+.navbar li a {
+   color:#D5BF8E !important;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: 19px;
+   font-family: 'Simonetta', sans-serif;
+
+ }
+
+
+
+/*   Slider ----------------------------------- */
+
+.carousel-item {
+    height: 83vh;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+.parallax-text {
+    color: #ffffff;
+    position: fixed;
+    top: 100;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    overflow: hidden;
+}
+.parallax-text h1{
+    font-weight: 500;
+    font-family: 'Simonetta', sans-serif;
+
+}
+    
+
+
+/*   About Page ----------------------------------- */
+
+.about-parallax {
+    background: url("/static/img/bordeaux.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40em;
+    background-attachment: fixed;
+    filter: brightness(70%);
+}
+
+.about-page h2 {
+    font-family: 'Simonetta', sans-serif;
+}
+
+.jumbotron-heading {
+    color:#D5BF8E;
+    font-family: 'Simonetta', sans-serif;
+}
+
+.map-div{
+    margin-bottom: 40px;
+
+  }
+
+.contact-section {
+    margin: 14px;
+    margin-top: 40px;
+}
+
+
+/*   Products ----------------------------------- */
+
+
+ .products-showcase .btn-dark {
+    color:#D5BF8E;
+    background: #fff;
+}
+.products-showcase  {
+    color:#D5BF8E;
+    Padding-top: 70px;
+    padding-bottom: 70px;
+    font-family: 'Simonetta', sans-serif;
+
+}
+ 
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.row-images {
+    display: flex;
+    justify-content:space-between;
+}
+
+.img-mini-banner {
+   width:100%;
+   
+}
+
+
+.title-homepage {
+    text-align: center;
+    color: yellow;
+    vertical-align: middle;
+    font-weight: 200;
+    font-size: 3em;
+    font-family: 'Simonetta', sans-serif;
+
+}
+
+
+
+.add-checkout-div {
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+.card-content {
+    display: flex;
+    padding: 20px 40px;
+    justify-content: space-between;
+    /* align-items: flex-end; */
+}
+
+
+/*   Parallax ----------------------------------- */
+
+.parallax {
+    background: url("/static/img/paralax2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 35em;
+    background-attachment: fixed;
+    filter: brightness(70%);
+}
+
+.input-add-checkout {
+    width: 30%;
+    margin-left: 2em;
+}
+
+.title-product-link {
+color:#D5BF8E !important;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: 22px;
+   font-family: 'Simonetta', sans-serif;
+}
+
+.card-title a:hover{
+    text-decoration: none;
+    color: #D5BF8E;
+}
+
+/*   Blog section ----------------------------------- */
+
+.img-fluid {
+    max-width: 30%;
+    height: auto;
+  }
+
+
+
+/*   Contact ----------------------------------- */
+.contact-section {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    background: #e6e6e6;
+}
+
+.contact-section .medium {
+    margin: 50px;
+}
+
+.content-wrapper  {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.maps {
+    padding-bottom: 20px;
+}
+
+
+/* Product detail Page CSS ----------------------------------- */
+ 
+.add-checkout-div-product {
+    padding-top: 2em;
+}
+
+
+/*  Cart Page ----------------------------------- */
+
+ 
+.input-cart {
+    width: 20%;
+}
+
+.div-checkout-pay {
+    text-align: right;
+    padding-right: 3em;
+}
+
+
+.list-unstyled li a {
+    color: black;
+    text-decoration: none;
+}
+
+.list-unstyled li a:hover {
+    color: grey;
+}
+
+.votes-form {
+    display: inline;
+}
+
+/*   Footer ----------------------------------- */
+
+
+.mini-banner-section {
+    padding: 2em;
+}
+ 
+
+ #myFooter {
+    background-color: #273940;
+    color: white;
+    padding-top: 30px;
+}
+
+.footer-copyright {
+    background-color: #333333;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+}
+
+#myFooter .row {
+    margin-bottom: 60px;
+}
+
+
+.footer-copyright p {
+    margin: 10px;
+    color: #ccc;
+    text-transform: uppercase;
+    font-size: smaller;
+    font-family: 'Simonetta', sans-serif;
+
+}
+
+#myFooter ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.7;
+}
+
+#myFooter h5 {
+    font-family: 'Simonetta', sans-serif;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#myFooter h2 a{
+    font-family: 'Simonetta', sans-serif;
+
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+#myFooter a {
+    color: #d2d1d1;
+    text-decoration: none;
+}
+
+#myFooter a:hover,
+#myFooter a:focus {
+    text-decoration: none;
+    color: white;
+}
+
+#myFooter .social-networks {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 16px;
+}
+
+#myFooter .social-networks a {
+    font-size: 20px;
+    color: #f9f9f9;
+    padding: 10px;
+    transition: 0.2s;
+    font-family: 'Simonetta', sans-serif;
+
+}
+
+#myFooter .social-networks a:hover {
+    text-decoration: none;
+    color: #f9f9f9;
+}
+
+
+.footer-links {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.footer-img img {
+    width: 80%;
+}
+
+/*   Media Queries ----------------------------------- */
+ 
+
+@media screen and (max-width: 767px) {
+    #myFooter {
+        text-align: center;
+    }
+    
+    .card {
+        width: 100%;
+    }
+    
+    
+}
+
