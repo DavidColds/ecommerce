@@ -3,6 +3,6 @@ rvm:
 - "3.6.6"
 install: "pip install -r requirements.txt"
 script:
-- SECRE_KEY="super_secret_key" ./manage.py test
+- SECRE_KEY="ultra_super_secret_key" ./manage.py test
 
 os: win
