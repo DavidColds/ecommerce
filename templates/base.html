@@ -1,121 +1,175 @@
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Ecommerce</title>
-  <link rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Simonetta:500,600,700,800" rel="stylesheet">
-
-  <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
-
-  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+  <title>{% block page_title %}{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Simonetta:500,600,700,800" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
   <!-- Fontawosome CSS -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <!-- Checkout JS -->
+  {% block head_js %}
+  {% endblock head_js %}
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-  <div class="site-wrap">
-    <div class="contariner-logo text-center ">
-      <a href="{% url 'index' %}"><img class="logo logo--main" src="{% static 'img/winelogo.png' %}" height="180px"
-          alt=""></a>
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar10">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse collapse" id="navbar10">
-          <ul class="navbar-nav nav-fill w-100">
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'index' %}">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'index' %}">Wines</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'index' %}">About</a>
-            </li>
-            {% if user.is_authenticated %}
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'profile' %}">PROFILE</a>
-            </li>
-            {% else %}
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'login' %}">Login</a>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'register' %}">Register</a>
-            </li>
-            {% endif %}
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'view_cart' %}">
-                <i class=""></i> Cart
-                {% if product_count > 0 %}
-                <label class="badge badge-dark">{{ product_count }}</label>
-            </li>
-            {% endif %}
-            </a>
-          </ul>
-        </div>
+<body>
+  <!----Age verify -->
+  <main>
+    <article class="box">
+      <div class="box-left">
+        <img>
+        <p>products are only for use in states where the sale and consumption of such products are legal.
+        </p>
       </div>
-    </nav>
+      <div class="box-right">
+        <h3>Age Verification</h3>
+        <p>By clicking enter, I certify that I am over the age of 21 and will comply with the above statement.</p>
 
+        <a href="#" class="btn btn-alpha" id="refresh-page">ENTER</a>
 
+        <p class="decor-line"><span>Or</span></p>
 
-    {% if messages %}
-    <div class="alert alert-success">
-      <div class="messages">
-        {% for message in messages %}
-        {{ message }}
-        {% endfor %}
+        <a href="https://www.google.com/" class="btn btn-beta" id="reset-session">EXIT</a>
+
+        <small>Always enjoy responsibily.</small>
       </div>
-    </div>
-    {% endif %}
-
-    <!---Image Slider-->
-
-    <div id="carouselIndicators" class="carousel slide" data-ride="carousel" data-interval="7000">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <!---Slide 0-->
-        <div class="carousel-item active" style="background-image: url(static/img/wine.jpg);"></div>
-        <div class="carousel-caption text-center">
-          <h1>Welcome!</h1>
-          <a class="btn btn-outline-light btn-lg" href="{% url 'products' %}">Explore!</a>
-        </div>
-
-        <!---Slide 1-->
-        <div class="carousel-item" style="background-image: url(static/img/wine2.jpg);"></div>
-        <!---Slide 2-->
-        <div class="carousel-item" style="background-image: url(static/img/wine3.jpg);"></div>
       </div>
-    </div>
+    </article>
+  </main>
 
-
-
-    <div class="container">
-      {% block content %}
-
-      {% endblock %}
-    </div>
-
+  <!-----end-->
+  <div class="contariner-logo text-center ">
+    <a href="{% url 'index' %}"><img class="logo logo--main" src="{% static 'img/winelogo.png' %}" height="180px"
+        alt=""></a>
   </div>
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar10">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbar10">
+        <ul class="navbar-nav nav-fill w-100">
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'all_products2' %}">Wines</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}">CONTACT</a>
+          </li>
+          <ul class="navbar-nav pr-3">
+            <!-- Registration Links -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                My Account
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                {% if user.is_authenticated %}
+                <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                {% else %}
+                <a class="nav-link" href="{% url 'login' %}">Login</a>
+                <a class="nav-link" href="{% url 'registration' %}">Register</a>
+                {% endif %}
+                <a class="nav-link" href="{% url 'view_cart' %}">
+                  <i class="fas fa-shopping-cart"></i> Cart
+                  {% if product_count > 0 %}
+                  <label class="badge badge-warning">{{ product_count }}</label>
+                  {% endif %}
+                </a>
+              </div>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Body Content -->
+  <!-- Messages for alerts -->
+  {% if messages %}
+  <ul class="messages" id="messages">
+    {% for msg in messages %}
+    <li>
+      <div class="alert alert-{{msg.level_tag}}" role="alert">
+        {{msg.message}}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% block content %} {% endblock %}
+
+  <!-- Footer -->
+  <footer id="myFooter">
+    <div class="container mt-5">
+      <hr>
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+          <div class="contact-info">
+            <h3>Find Us</h3>
+            <p>Le Presbytère, Gabiran,<br>
+              33350 Mérignas, France</p>
+            <p><a class="button"
+                href="https://www.google.com/maps/place/Vineyards+Bordeaux+-+Christie's+International+Real+Estate/@44.7857715,-0.0885009,16.67z/data=!4m8!1m2!2m1!1sbordeaux+vineyard!3m4!1s0x0:0xbab01697688a158a!8m2!3d44.785969!4d-0.0870149"
+                target="_blank" rel="noopener">Get Directions</a></p>
+            <p><a class="no-deco" href="mailto:info@Bordeauxvineyards.com"><i
+                  class="icon-mail"></i>&nbsp;info@Bordeauxvineyards.com</a><br>
+              <a class="no-deco" href="tel:707-857-5700"><i class="icon-phone"></i>&nbsp;+33 5 57 84 81 88</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 footer-links">
+          <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'all_products2' %}">Products</a></li>
+            <li><a href="{% url 'get_posts' %}">Grapes</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            {% if user.is_authenticated %}
+            <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+            {% else %}
+            <a class="nav-link" href="{% url 'login' %}">Login</a>
+            <a class="nav-link" href="{% url 'registration' %}">Register</a>
+            {% endif %}
+          </ul>
+          <div class="social-networks">
+            <a href="https://www.twitter.com/" class="twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/" class="facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/" class="linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <div>
+            <h3>Hours</h3>
+            <p>Visits by Appointment Only<br>
+              Monday to Sunday<br>
+              10am to 5pm</p>
+            <p><a class="button" href="mailto:info@Bordeauxvineyards.com">Book an Appointment</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <p>© 2019 David Drughi Copyright </p>
+    </div>
+  </footer>
+
+
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -127,7 +181,73 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
 
+
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+
+      if (sessionStorage.getItem('advertOnce') !== 'true') {
+        //sessionStorage.setItem('advertOnce','true');
+        $('.box').show();
+      } else {
+        $('.box').hide();
+      }
+
+      $('#refresh-page').on('click', function () {
+        $('.box').hide();
+        sessionStorage.setItem('advertOnce', 'true');
+      });
+
+      $('#reset-session').on('click', function () {
+        $('.box').show();
+        sessionStorage.setItem('advertOnce', '');
+      });
+
+    });
+    $(document).ready(function () {
+      // Test for placeholder support
+      $.support.placeholder = (function () {
+        var i = document.createElement('input');
+        return 'placeholder' in i;
+      })();
+
+      // Hide labels by default if placeholders are supported
+      if ($.support.placeholder) {
+        $('.form-label').each(function () {
+          $(this).addClass('js-hide-label');
+        });
+
+        // Code for adding/removing classes here
+        $('.form-group').find('input, textarea').on('keyup blur focus', function (e) {
+
+          // Cache our selectors
+          var $this = $(this),
+            $label = $this.parent().find("label");
+
+          switch (e.type) {
+            case 'keyup': {
+              $label.toggleClass('js-hide-label', $this.val() == '');
+            } break;
+            case 'blur': {
+              if ($this.val() == '') {
+                $label.addClass('js-hide-label');
+              } else {
+                $label.removeClass('js-hide-label').addClass('js-unhighlight-label');
+              }
+            } break;
+            case 'focus': {
+              if ($this.val() !== '') {
+                $label.removeClass('js-unhighlight-label');
+              }
+            } break;
+            default: break;
+          }
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>
