@@ -5,7 +5,7 @@ botocore==1.12.211
 certifi==2019.9.11
 chardet==3.0.4
 dj-database-url==0.5.0
-Django==1.11.23
+Django==2.2.6
 django-bootstrap4==0.0.8
 -e git://github.com/maraujop/django-crispy-forms.git@dec71c73d5234a42dc74b7f90c26535d3a2b2875#egg=django_crispy_forms
 django-forms-bootstrap==3.1.0
