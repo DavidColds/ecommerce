@@ -4,58 +4,56 @@
 {% block content %}
 
 <div class="container">
-    <section class="col-xs-12 col-md-8 col-lg-12 text-center">
-        <div class="contact-section">
-            <div class="row">
-                <div id="contact-info" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                    <div class="scroll-section">
-                        <h3>Find Us</h3>
-                        <p>Le Presbytère, Gabiran,<br>
-                            33350 Mérignas, France</p>
-                        <p><a class="button"
-                                href="https://www.google.com/maps/place/Vineyards+Bordeaux+-+Christie's+International+Real+Estate/@44.7857715,-0.0885009,16.67z/data=!4m8!1m2!2m1!1sbordeaux+vineyard!3m4!1s0x0:0xbab01697688a158a!8m2!3d44.785969!4d-0.0870149"
-                                target="_blank" rel="noopener">Get Directions</a></p>
-                        <p><a class="no-deco" href="mailto:info@Bordeauxvineyards.com"><i
-                                    class="icon-mail"></i>&nbsp;info@Bordeauxvineyards.com</a><br>
-                            <a class="no-deco" href="tel:707-857-5700"><i class="icon-phone"></i>&nbsp;+33 5 57 84 81
-                                88</a>
-                        </p>
-                    </div>
-                </div>
-                <div id="hours" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                    <div class="scroll-section centered wow fadeInUp">
-                        <h3>Hours</h3>
-                        <p>Visits by Appointment Only<br>
-                            Monday to Sunday<br>
-                            10am to 5pm</p>
-                        <p><a class="button" href="mailto:info@Bordeauxvineyards.com">Book an Appointment</a></p>
-                    </div>
-                </div>
+  <section class="col-xs-12 col-md-8 col-lg-12 text-center">
+    <div class="contact-section">
+      <div class="row">
+        <div id="contact-info" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <div class="scroll-section">
+            <h3>Find Us</h3>
+            <p>Le Presbytère, Gabiran,<br>
+              33350 Mérignas, France</p>
+            <p><a class="button"
+                href="https://www.google.com/maps/place/Vineyards+Bordeaux+-+Christie's+International+Real+Estate/@44.7857715,-0.0885009,16.67z/data=!4m8!1m2!2m1!1sbordeaux+vineyard!3m4!1s0x0:0xbab01697688a158a!8m2!3d44.785969!4d-0.0870149"
+                target="_blank" rel="noopener">Get Directions</a></p>
+            <p><a class="no-deco" href="mailto:info@Bordeauxvineyards.com"><i class="icon-mail"></i>&nbsp;info@Bordeauxvineyards.com</a><br>
+              <a class="no-deco" href="tel:707-857-5700"><i class="icon-phone"></i>&nbsp;+33 5 57 84 81
+                88</a>
+            </p>
+          </div>
+        </div>
+        <div id="hours" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <div class="scroll-section centered wow fadeInUp">
+            <h3>Hours</h3>
+            <p>Visits by Appointment Only<br>
+              Monday to Sunday<br>
+              10am to 5pm</p>
+            <p><a class="button" href="mailto:info@Bordeauxvineyards.com">Book an Appointment</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='text-center'>
+      <h1 class="contact-title">{{ title }}</h1>
+    </div>
+    <div id="container-contact" class='container'>
+      <div class='row'>
+        <div class='col-md-6 col-12 mx-auto' id="contact-col">
+          <form class='contact-form' method='POST' action='{% url "contact" %}'> {% csrf_token %}
+            {{ form|crispy }}
+            <div class="text-center">
+              <button type='submit' id="btn-contact" class='btn btn-default'>Submit</button>
             </div>
+          </form>
         </div>
-        <div class='text-center'>
-            <h1 class="contact-title">{{ title }}</h1>
-        </div>
-        <div id="container-contact" class='container'>
-            <div class='row'>
-                <div class='col-md-6 col-12 mx-auto' id="contact-col">
-                    <form class='contact-form' method='POST' action='{% url "contact" %}'> {% csrf_token %}
-                        {{ form|crispy }}
-                        <div class="text-center">
-                            <button type='submit' id="btn-contact" class='btn btn-default'>Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+      </div>
+    </div>
 </div>
-
 </section>
 <div class="container-fluid">
-    <iframe class="maps"
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5663.512788571098!2d-0.0885009!3d44.7857715!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbab01697688a158a!2sVineyards%20Bordeaux%20-%20Christie&#39;s%20International%20Real%20Estate!5e0!3m2!1sen!2sse!4v1569919321233!5m2!1sen!2sse"
-        width="100%" height="550" frameborder="0" style="border:20;" allowfullscreen="">
-    </iframe>
+  <iframe class="maps"
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5663.512788571098!2d-0.0885009!3d44.7857715!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbab01697688a158a!2sVineyards%20Bordeaux%20-%20Christie&#39;s%20International%20Real%20Estate!5e0!3m2!1sen!2sse!4v1569919321233!5m2!1sen!2sse"
+    width="100%" height="550" frameborder="0" style="border:20;" allowfullscreen="">
+  </iframe>
 </div>
 
 {% endblock %}
