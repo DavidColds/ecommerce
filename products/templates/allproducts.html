@@ -5,17 +5,14 @@
 <section class="products-showcase">
   <div class="container">
 
-
-
     <div class="wrapper">
       <div class="main">
-		<input type="text" name="Search" placeholder="Search...">
-		<button>SEARCH</button>
-	</div>
+        <form  action="{% url 'search' %}" method="get">
+        <input type="text" name="q" type="search" placeholder="Search...">
+        <button type="search">Search</button>
+      </form>
+      </div>
     </div>
-
-
-
 
     <div class="row row-header card-columns justify-content-center">
       <div class="card-deck">
