@@ -18,7 +18,7 @@
         <div class="p-4">
           <p class="lead font-weight-bold">{{ product.name }}</p>
           <p class="lead">
-            <span>€ {{ product.price }}</span>
+            <span> {{ product.price }} sek</span>
           </p>
           <p>{{ product.description }}</p>
           <form method="post" action="{% url 'add_to_cart' product.id %}">

@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'home',
     'contact',
     'django_countries',
+
 ]
 
 MIDDLEWARE = [

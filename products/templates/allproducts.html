@@ -26,7 +26,7 @@
             <div class="card-body">
               <h5 class="card-title product-name"><a href="{% url 'product_detail' product.id %}" class="title-product-link">{{ product.name }}</a></h5>
               <!-- <p class="card-text product-description">{{ product.description }}</p> -->
-              <p class="product-price">€ {{ product.price }}</p>
+              <p class="product-price">{{ product.price }}Sek</p>
             </div>
             <form method="post" action="{% url 'add_to_cart' product.id %}">
               {% csrf_token %}
