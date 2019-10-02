@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'suggestions',
     'home',
     'contact',
+    'django_countries',
 ]
 
 MIDDLEWARE = [
