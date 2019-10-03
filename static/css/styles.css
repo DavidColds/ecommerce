@@ -247,15 +247,14 @@ body, html {
 
 /*   Products ----------------------------------- */
 
-
  .products-showcase .btn-dark {
     color:#D5BF8E;
     background: #fff;
 }
 .products-showcase  {
     color:#D5BF8E;
-    Padding-top: 70px;
-    padding-bottom: 70px;
+    Padding-top: 100px;
+    padding-bottom: 100px;
     font-family: 'Simonetta', sans-serif;
 
 }

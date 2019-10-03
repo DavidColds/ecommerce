@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Optional theme -->
   <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}" type="text/css">
   <!-- Required meta tags -->
   <meta charset="utf-8">
 
@@ -29,32 +30,7 @@
   {% endblock head_js %}
 </head>
 
-<body>
-  <!----Age verify -->
-  <main>
-    <article class="box">
-      <div class="box-left">
-        <img>
-        <p>products are only for use in states where the sale and consumption of such products are legal.
-        </p>
-      </div>
-      <div class="box-right">
-        <h3>Age Verification</h3>
-        <p>By clicking enter, I certify that I am over the age of 21 and will comply with the above statement.</p>
-
-        <a href="#" class="btn btn-alpha" id="refresh-page">ENTER</a>
-
-        <p class="decor-line"><span>Or</span></p>
-
-        <a href="https://www.google.com/" class="btn btn-beta" id="reset-session">EXIT</a>
-
-        <small>Always enjoy responsibily.</small>
-      </div>
-      </div>
-    </article>
-  </main>
-
-  <!-----end-->
+<body data-aos="fade-up">
   <div class="contariner-logo text-center ">
     <a href="{% url 'index' %}"><img class="logo logo--main" src="{% static 'img/winelogo.png' %}" height="180px" alt=""></a>
   </div>
@@ -173,79 +149,11 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script type="text/javascript" href="{% static 'js/aos.js' %}"></script>
+  <script>
+  AOS.init();
+</script>
 
-
-  <script type="text/javascript">
-    jQuery(document).ready(function($) {
-
-      if (sessionStorage.getItem('advertOnce') !== 'true') {
-        //sessionStorage.setItem('advertOnce','true');
-        $('.box').show();
-      } else {
-        $('.box').hide();
-      }
-
-      $('#refresh-page').on('click', function() {
-        $('.box').hide();
-        sessionStorage.setItem('advertOnce', 'true');
-      });
-
-      $('#reset-session').on('click', function() {
-        $('.box').show();
-        sessionStorage.setItem('advertOnce', '');
-      });
-
-    });
-
-    $(document).ready(function() {
-      // Test for placeholder support
-      $.support.placeholder = (function() {
-        var i = document.createElement('input');
-        return 'placeholder' in i;
-      })();
-
-      // Hide labels by default if placeholders are supported
-      if ($.support.placeholder) {
-        $('.form-label').each(function() {
-          $(this).addClass('js-hide-label');
-        });
-
-        // Code for adding/removing classes here
-        $('.form-group').find('input, textarea').on('keyup blur focus', function(e) {
-
-          // Cache our selectors
-          var $this = $(this),
-            $label = $this.parent().find("label");
-
-          switch (e.type) {
-            case 'keyup':
-              {
-                $label.toggleClass('js-hide-label', $this.val() == '');
-              }
-              break;
-            case 'blur':
-              {
-                if ($this.val() == '') {
-                  $label.addClass('js-hide-label');
-                } else {
-                  $label.removeClass('js-hide-label').addClass('js-unhighlight-label');
-                }
-              }
-              break;
-            case 'focus':
-              {
-                if ($this.val() !== '') {
-                  $label.removeClass('js-unhighlight-label');
-                }
-              }
-              break;
-            default:
-              break;
-          }
-        });
-      }
-    });
-  </script>
 </body>
-
 </html>
