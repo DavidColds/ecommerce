@@ -8,14 +8,21 @@
   <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
   <!-- Required meta tags -->
   <meta charset="utf-8">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Simonetta:500,600,700,800" rel="stylesheet">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   <!-- Fontawosome CSS -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
   <!-- Checkout JS -->
   {% block head_js %}
@@ -49,8 +56,7 @@
 
   <!-----end-->
   <div class="contariner-logo text-center ">
-    <a href="{% url 'index' %}"><img class="logo logo--main" src="{% static 'img/winelogo.png' %}" height="180px"
-        alt=""></a>
+    <a href="{% url 'index' %}"><img class="logo logo--main" src="{% static 'img/winelogo.png' %}" height="180px" alt=""></a>
   </div>
   <nav class="navbar navbar-expand-lg navbar-dark ">
     <div class="container">
@@ -74,8 +80,7 @@
           <ul class="navbar-nav pr-3">
             <!-- Registration Links -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 My Account
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -127,8 +132,7 @@
             <p><a class="button"
                 href="https://www.google.com/maps/place/Vineyards+Bordeaux+-+Christie's+International+Real+Estate/@44.7857715,-0.0885009,16.67z/data=!4m8!1m2!2m1!1sbordeaux+vineyard!3m4!1s0x0:0xbab01697688a158a!8m2!3d44.785969!4d-0.0870149"
                 target="_blank" rel="noopener">Get Directions</a></p>
-            <p><a class="no-deco" href="mailto:info@Bordeauxvineyards.com"><i
-                  class="icon-mail"></i>&nbsp;info@Bordeauxvineyards.com</a><br>
+            <p><a class="no-deco" href="mailto:info@Bordeauxvineyards.com"><i class="icon-mail"></i>&nbsp;info@Bordeauxvineyards.com</a><br>
               <a class="no-deco" href="tel:707-857-5700"><i class="icon-phone"></i>&nbsp;+33 5 57 84 81 88</a>
             </p>
           </div>
@@ -171,22 +175,8 @@
 
 
 
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="http://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
-
-
   <script type="text/javascript">
-    jQuery(document).ready(function ($) {
+    jQuery(document).ready(function($) {
 
       if (sessionStorage.getItem('advertOnce') !== 'true') {
         //sessionStorage.setItem('advertOnce','true');
@@ -195,55 +185,62 @@
         $('.box').hide();
       }
 
-      $('#refresh-page').on('click', function () {
+      $('#refresh-page').on('click', function() {
         $('.box').hide();
         sessionStorage.setItem('advertOnce', 'true');
       });
 
-      $('#reset-session').on('click', function () {
+      $('#reset-session').on('click', function() {
         $('.box').show();
         sessionStorage.setItem('advertOnce', '');
       });
 
     });
-    
-    $(document).ready(function () {
+
+    $(document).ready(function() {
       // Test for placeholder support
-      $.support.placeholder = (function () {
+      $.support.placeholder = (function() {
         var i = document.createElement('input');
         return 'placeholder' in i;
       })();
 
       // Hide labels by default if placeholders are supported
       if ($.support.placeholder) {
-        $('.form-label').each(function () {
+        $('.form-label').each(function() {
           $(this).addClass('js-hide-label');
         });
 
         // Code for adding/removing classes here
-        $('.form-group').find('input, textarea').on('keyup blur focus', function (e) {
+        $('.form-group').find('input, textarea').on('keyup blur focus', function(e) {
 
           // Cache our selectors
           var $this = $(this),
             $label = $this.parent().find("label");
 
           switch (e.type) {
-            case 'keyup': {
-              $label.toggleClass('js-hide-label', $this.val() == '');
-            } break;
-            case 'blur': {
-              if ($this.val() == '') {
-                $label.addClass('js-hide-label');
-              } else {
-                $label.removeClass('js-hide-label').addClass('js-unhighlight-label');
+            case 'keyup':
+              {
+                $label.toggleClass('js-hide-label', $this.val() == '');
               }
-            } break;
-            case 'focus': {
-              if ($this.val() !== '') {
-                $label.removeClass('js-unhighlight-label');
+              break;
+            case 'blur':
+              {
+                if ($this.val() == '') {
+                  $label.addClass('js-hide-label');
+                } else {
+                  $label.removeClass('js-hide-label').addClass('js-unhighlight-label');
+                }
               }
-            } break;
-            default: break;
+              break;
+            case 'focus':
+              {
+                if ($this.val() !== '') {
+                  $label.removeClass('js-unhighlight-label');
+                }
+              }
+              break;
+            default:
+              break;
           }
         });
       }

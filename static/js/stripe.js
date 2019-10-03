@@ -1,12 +1,14 @@
+var stripe = Stripe('pk_test_5y2xq7XIpNADYrLWDpDwp7jZ008GJAQu47');
+
 $(function() {
     $("#payment-form").submit(function() {
         var form = this;
-        Stripe.card.createToken({
-            number: $('.card-number').val(),
-            cvc: $('.card-cvc').val(),
-            exp_month: $('.card-expiry-month').val(),
-            exp_year: $('.card-expiry-year').val()
-          }, stripeResponseHandler);
+        var card = {
+            number: $("#id_credit_card_number").val(),
+            expMonth: $("#id_expiry_month").val(),
+            expYear: $("#id_expiry_year").val(),
+            cvc: $("#id_cvv").val()
+        };
 
     Stripe.createToken(card, function(status, response) {
         if (status === 200) {
