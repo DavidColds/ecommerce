@@ -1,7 +1,6 @@
-var stripe = Stripe('pk_test_5y2xq7XIpNADYrLWDpDwp7jZ008GJAQu47');
-
 $(function() {
-    $("#payment-form").submit(function() {
+    $("#payment-form").submit(function(event) {
+      event.preventDefault()
         var form = this;
         var card = {
             number: $("#id_credit_card_number").val(),
