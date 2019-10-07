@@ -49,10 +49,9 @@ INSTALLED_APPS = [
     'search',
     'checkout',
     'posts',
+    'suggestions',
     'home',
     'contact',
-    'django_countries',
-
 ]
 
 MIDDLEWARE = [
