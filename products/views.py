@@ -38,23 +38,22 @@ def get_posts2(request):
     return render(request, "products.html", {'posts': posts})
 
 
-def products_review(request, id):
+def product_review(request, id):
     products = get_object_or_404(Product, pk=id)
-    reviews = Review.objects.filter(products=id).order_by('-pub_date')[:10]
-    return render(request, "productdetail.html", {"reviews": reviews, "products": products})
+    reviews = Review.objects.filter(product=id).order_by('-pub_date')[:5]
+    return render(request, "productdetail.html", {'reviews': reviews, "product": product})
 
 
 def add_review(request, id):
-    products = get_object_or_404(Product, pk=id)
+    product = get_object_or_404(Product, pk=id)
     if request.method == "POST":
         form = ReviewForm(request.POST)
         if form.is_valid():
             review = form.save(commit=False)
-            review.products = products
+            review.Product = product
             review.user_name = request.user
             form.save()
-            products = sroducts.objects.all()
-        return redirect('products')
+        return redirect('all_products2')
     else:
         form = ReviewForm()
-        return render(request, "create_review.html", {'product': products, 'form': form})
+        return render(request, "create_review.html", {'form': form})

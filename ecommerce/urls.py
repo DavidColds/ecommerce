@@ -5,7 +5,7 @@ from products import urls as urls_products
 from products.views import all_products2
 from products.views import all_products
 from products import urls as urls_products
-from products.views import products_review, add_review
+from products.views import product_review, add_review
 from cart import urls as urls_cart
 from search import urls as urls_search
 from checkout import urls as urls_checkout

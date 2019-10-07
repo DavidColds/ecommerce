@@ -14,7 +14,7 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
-        
+
 class Review(models.Model):
     RATING_CHOICES = (
         (1, '1'),
