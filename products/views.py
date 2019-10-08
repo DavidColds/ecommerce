@@ -28,8 +28,8 @@ def all_products2(request):
 
 def product_detail(request, pk):
     product = get_object_or_404(Product, pk=pk)
-    product.save()
-    return render(request, "productdetail.html", {'product': product})
+    reviews = Review.objects.filter(Product=product)
+    return render(request, "productdetail.html", {'product': product, 'reviews':reviews})
 
 
 def get_posts2(request):
