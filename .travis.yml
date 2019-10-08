@@ -6,7 +6,5 @@ install:
   - pip install -r requirements.txt
   - pip install .script:
 - SECRET_KEY="secretkey"  python ./manage.py test
-virtualenv:
-  system_site_packages: true
 services:
     - mysql
