@@ -13,8 +13,6 @@ from django.views import static
 from django.views.generic import RedirectView
 from posts import urls as urls_posts
 from posts.views import get_posts
-from suggestions import urls as urls_suggestions
-from suggestions.views import get_suggestions
 from django.views.static import serve
 from .settings import MEDIA_ROOT
 from home.views import about
@@ -35,9 +33,6 @@ urlpatterns = [
     url(r'^posts/', include('posts.urls')),
     url(r'^posts/', include(urls_posts)),
     url(r"^posts$", get_posts, name="get_posts"),
-    url(r'^suggestions/', include('suggestions.urls')),
-    url(r'^suggestions/', include(urls_suggestions)),
-    url(r"^suggestions$", get_suggestions, name="get_suggestions"),
     url('contact_page/', contact, name='contact'),
     url('about/', about, name='about'),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
