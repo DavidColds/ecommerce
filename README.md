@@ -82,62 +82,44 @@ This project has been tested in many different ways: .
 
     #### Some of Manual Tests done
 
-    <table>
-        <tr>
-            <th>Manual Test</th>
-            <th>Status</th>
-        </tr>
-        <tr>
-            <td>Clicking on logo icon in navigation takes user to homepage</td>
-            <td>Successful</td>
-        </tr>
-        <tr>
-            <td>The platform has been tested on all modern desktop and mobile browsers to ensure cross compatibility and functionalities.</td>
-            <td>Successful</td>
-        </tr>
-        <tr>
-            <td>The platform has been tested to be fully responsive and that is correctly displayed across all of type devices.</td>
-            <td>Successful</td>
-        </tr>
-        <tr>
-            <td>The platform has been tested to ensure that all of the user stories were functional without errors.</td>
-            <td>Successful</td>
-        </tr>
-        <tr>
-            <td>The platform has been tested to make sure all urls work properly</td>
-            <td>Successful</td>
-        </tr>
-        <tr>
-            <td>The platform has been tested to ensure all text-area and inputs are perfectly functioning and sending/receiving the right data.</td>
-            <td>Successful</td>
-        </tr>
-        <tr>
-            <td>All links and buttons tested to make sure they all works as they should.</td>
-            <td>Successful</td>
-        </tr>
-        <tr>
-            <td>The user can come back to the previous window from everywhere, no rabbit holes. </td>
-            <td>Successful</td>
-        </tr>
-        <tr>
-            <td>Data from database is been accessible at all times.</td>
-            <td>Successful</td>
-        </tr>
-        <tr>
-            <td>Purchase process until the purchase its done works perfectly.</td>
-            <td>Successful</td>
-        </tr>
-        <tr>
-            <td>Changing password trough email works perfectly.</td>
-            <td>Successful</td>
-        </tr>
-        <tr>
-            <td>Contact email trough Contact page works.</td>
-            <td>Successful</td>
-        </tr>
-        <tr>
-            <td>Being able to rate and review a product works perfectly</td>
-            <td>Successful</td>
-        </tr>
-    </table>
-    </p>
+          Manual Testing
+
+-Clicking on logo icon in navigation takes user to homepage
+ Successful
+
+-The platform has been tested on all modern desktop and mobile browsers to ensure cross compatibility and functionalities.
+  Successful
+
+-The platform has been tested to be fully responsive and that is correctly displayed across all of type devices.
+  Successful
+
+
+-The platform has been tested to ensure that all of the user stories were functional without errors.
+  Successful
+
+-The platform has been tested to make sure all urls work properly
+  Successful
+
+-The platform has been tested to ensure all text-area and inputs are perfectly functioning and sending/receiving the right data.</td>
+  Successful
+
+-All links and buttons tested to make sure they all works as they should.
+  Successful
+
+-The user can come back to the previous window from everywhere, no rabbit holes.
+  Successful
+
+-Data from database is been accessible at all times.
+  Successful
+
+-Purchase process until the purchase its done works perfectly.
+  Successful
+
+-Changing password trough email works perfectly.
+  Successful
+
+-Contact email trough Contact page works.
+  Successful
+
+-Being able to rate and review a product works perfectly.
+  Successful
