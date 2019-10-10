@@ -117,50 +117,60 @@ types of devices and screen sizes.
 
 GitHub Repo [here](https://github.com/DavidColds/ecommerce)
 
-### For local deployment
+Getting my application ready for deployment consisted of the following: -
+1. Removing all my hard-coded environment variables to project my keys and secrets. These were placed in the .bashrc for development and entered into Heroku's Config Vars for production.
+2. Ensuring the applications requirements.txt is up-to-date with all the latest packages installed for my app being noted on this file.
+	**The command to update requirements**
+		```
+		pip3 freeze > requirements.txt
+		```
+3. Set up the Procfile - *A Procfile is required by Heroku in order to tell the service worker what command to run for my application to start.*
+4. Push all static files to S3 Bucket `python3 manage.py collectstatic`
+5. Enter all my ENV vars into Heroku's config vars (A list of all my config var is listed below in expanding on my project section)
+6. Push all my latest production ready code to GitHub ready for deployment via Heroku's GitHub function where you can deploy from GitHub the production ready app.
 
--   Clone the project:
-    `git clone https://github.com/DavidColds/ecommerce.git`
--   Arrange contents so that the cloned document is in the root of the environment.
--   Following need to be installed
+**Upon successful deployment Heroku will give you the URL that is hosted your app**
 
-`pip install django=1.11` The framework used.
+*Upon unsuccessful deployment Heroku will log the cause of the error and this is view able in the 'view log' section on the Heroku website. Here you will find a detailed report of what has cause your application not to be deployed successfully. *
 
-`pip  install Pillow` A python package that allows images to be uploaded.
+### Heroku Config Var's
+| Key | Value |
+ --- | ---
+AWS_ACCESS_KEY_ID| `<your_access_key_id>`
+AWS_SECRET_ACCESS_KEY| `<your_secret_key>`
+DATABASE_URL| `<your_data_base_url>`
+DEFAULT_FROM_EMAIL| `<your_from_email>`
+DISABLE_COLLECTSTATIC| `1`
+EMAIL_HOST | `<your_email_host>`
+EMAIL_HOST_PASSWORD| `<your-email-password>`
+EMAIL_HOST_USER| `<your-email-address>`
+SECRET_KEY| `<a_secret_key>`
+SERVER_EMAIL| `<your_email_address>`
+STRIPE_PUBLISHABLE| `<your_stripe_key>`
+STRIPE_SECRET| `<your_stripe_secret>`
 
-`pip  install django-forms-bootstrap` To render our forms with bootstrap styling.
+## Expanding on my Project
+To get set up with a copy of my project you can do these multiple ways.
 
--   Create AWS account. Configure an S3 bucket for public access as a place to store user uploads and static files.
+**Via GitHub** -  
+1. You can manually download locally to your machine and then upload to your preferred IDE.
+2. Install the projects requirements.txt using `pip3 install -r requirements.txt`
+3. You will need to update a few project settings before we can run the app. Open settings folder and in local.py
+	1. `ADD ALLOWED HOST`
+	2.  `SET UP EMAIL CONFIG`
+	3. `SET UP STRIPE API KEY/SECRET`
+4. Once the above steps are complete you can try run the application using `python3 manage.py runserver $IP:$PORT`
 
-`pip  install django-storages` To set up media and static transfer on S3
+*Please note* step 4 may be different depending on the operating system you are running, please refer to the documentation for more details on running the Django server on different OS's
 
-`python3 manage.py collectstatic` To send all media and static directories to S3
-
-`pip  install psycopg2`
-`pip  install dj-database-url==0.5.0` To handle postgres database.
-
--   Create a new app on Heroku and link to your local repo.
--   Create a requirements.txt and Procfile.
-
-`pip freeze > requirements.txt` To tell Heroku what packages are required to run this program.
-
-`echo web: python app.py > Procfile` To tell Heroku what type of application this is.
-
--   Push to github
--   Create a new app on Heroku.
--   Add postgres database as a resource.
-
-Set up environment variables on Heroku for:
-
--   STRIPE_PUBLISHABLE
--   STRIPE_SECRET
--   EMAIL_ADDRESS
--   EMAIL_PASSWORD
--   AWS_ACCESS_KEY_ID
--   AWS_SECRET_ACCESS_KEY
-
--   Link up GitHub
--   Run deploy.
+**Via the CLI** -
+1. Clone my repo via Git using the following command `https://github.com/DavidColds/ecommerce`
+2. Install the projects requirements.txt using `pip3 install -r requirements.txt`
+3. You will need to update a few project settings before we can run the app. Open settings folder and in local.py
+	1. `ADD ALLOWED HOST`
+	2.  `SET UP EMAIL CONFIG`
+	3. `SET UP STRIPE API KEY/SECRET`
+4. Once the above steps are complete you can try run the application using `python3 manage.py runserver $IP:$PORT`
 
 ## Testing
 
