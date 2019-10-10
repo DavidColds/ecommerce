@@ -12,7 +12,64 @@
 
 ## Features overview
 
-### User stories
+## User stories
+
+##### The Home page the user should be able to:
+- Have a easy navigation trough the page,
+- From the navigation bar the user should go the main pages,
+- The 'Explore' button will direct the user to the wines page,
+
+- As a user I want to navigate from the footer of the page everywhere I need, luckily
+the footer does that, from the footer can the user navigate wherever the pleases.
+
+##### The Wines page the user should be able to:
+- As a user I want to able to se all the wines, prices and a search bar. The Wines
+page provide just that and ever a direct add to cart button.
+- As a user I want to read in detail about a wine and even read some reviews from
+other users. The pages provides just that, as the user clinks on the bottle it
+will be redirected to the product detail page, there the user can read about
+the product and reviews from others. The user is able to leave a comment and review.
+
+##### The Cart page the user should be able to:
+- As a user who wishes to purchase, I want to have a smooths and easy time doing that,
+and the pages provides just that. As soon the user clicks on the add to cart, the
+product will be added to the cart. From the cart, the user can proceed to the paying stage.
+The user must be an official member of the VineYard( that means to have an account but ),
+otherwise he will be redirected to the register page, there he will make an account and then the user,
+will be able to finish the purchase.
+- As a user I want to see what I'm buying before proceeding, and yes, the page
+provides just that. The cart page shows exactly what the user wishes to purchase,
+the price and the quantity.
+- The user will then click on the " checkout " button and whom will be redirected
+to the checkout page, there the user will be able to write in the requirements and the order will be placed.
+- As a user who just purchase a product I want to receive some kind of confirmation,
+as soon the order is being placed, the user will receive a " Thank You page".
+
+##### The About page the user should be able to:
+- As a user, I want to read some information about the VineYard, those informations
+can be found at the About page. At the About page the user can read about the VineYard
+and then to chose to go to Grapes or Wines page.
+
+##### The Contact page the user should be able to:
+- As a user I want to contact the VineYard, that can be found at the Contact page.
+The user has access to: address, directions, email and phone number.
+- As a user I might want to visit and se the VineYard myself, with just a phone call,
+the user can arrange a meeting within  the opening hours.
+- The user can find a simple email form where he can email the VineYard.
+- As user on the phone I want a link with directions. The page provides a quick
+google maps area where the user can get directions and redirected to google maps.
+
+##### The My Account page the user should be able to:
+- As a user I want a simple form where I can register an account.
+With a simple click and some few informations the website provides just that.
+Same goes for the login page.
+
+##### The Grapes page the user should be able to:
+- As a user I would want to know what kind of grapes the VineYard produces,
+the grapes page can be found at the bottom of the Home page, above the footer.
+- On the Grapes page the user can read about every sort of grape that grows
+at the VineYard.
+
 
 ## Technologies
 
@@ -70,7 +127,7 @@ Set up environment variables on Heroku for:
 - Run deploy.
 
 ## Testing
-<p>
+
 This project has been tested in many different ways: .
     - I used chrome developer tools to check for errors, responsiveness and test if something was wrong with my html, css or javascript files.
     - I used Django error page that appeared when my code had any errors, I also use print command at time with specific messages to understand if, for example, data was been aplied.
