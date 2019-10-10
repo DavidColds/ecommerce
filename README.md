@@ -27,9 +27,7 @@ registered users the ability to recovery their account and reset their passwords
 The app was designed so it aid the modern style of usability across all
 types of devices and screen sizes.
 
-## Features overview
-
-## User stories
+## User stories and Features overview
 
 ##### The Home page the user should be able to:
 
@@ -164,7 +162,7 @@ To get set up with a copy of my project you can do these multiple ways.
 *Please note* step 4 may be different depending on the operating system you are running, please refer to the documentation for more details on running the Django server on different OS's
 
 **Via the CLI** -
-1. Clone my repo via Git using the following command `https://github.com/DavidColds/ecommerce`
+1. Clone my repo via Git using the following command `https://github.com/DavidColds/ecommerce.git`
 2. Install the projects requirements.txt using `pip3 install -r requirements.txt`
 3. You will need to update a few project settings before we can run the app. Open settings folder and in local.py
 	1. `ADD ALLOWED HOST`
