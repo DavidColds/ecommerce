@@ -180,9 +180,7 @@ This project has been tested in many different ways: .
     \- I asked friends to test my application and to give me feedback.
     \- Finally I went through lots of manual tests to understand and make sure the functionality of the website was on point.
 
-    #### Some of Manual Tests done
-
-          Manual Testing
+#### Some of Manual Tests done:
 
 \-Clicking on logo icon in navigation takes user to homepage
  Successful
@@ -223,3 +221,18 @@ This project has been tested in many different ways: .
 
 \-Being able to rate and review a product works perfectly.
   Successful
+
+## Credits
+
+Big thanks to :
+[Corey Schafer](https://www.youtube.com/user/schafer5)
+[Traversy Media](https://www.youtube.com/user/TechGuyWeb)
+
+My mentor: Anthony Ngene and slack students.
+
+For the media and inspiration :
+[unsplash](https://unsplash.com/)
+[logo](https://www.freepik.com/free-vector/wine-grapes_794408.htm)
+[inspiration](https://kingfamilyvineyards.com/)
+[Aos](https://michalsnik.github.io/aos/)
+[Colorlib](https://colorlib.com/wp/templates/)
