@@ -4,7 +4,7 @@
 
 <h1> Full Stack Framework Milestone </h1>
 
-<a href="" target=" blank"> Click here to view the website </a>
+<a href="https://winebordeaux.herokuapp.com/" target="_blank"> Click here to view the website </a>
 
 ## Purpose
 
