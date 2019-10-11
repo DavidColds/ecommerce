@@ -4,7 +4,7 @@
 
 <h1> Full Stack Framework Milestone </h1>
 
-<a href="https://winebordeaux.herokuapp.com/" target="_blank"> Click here to view the website </a>
+<a href="https://winebordeaux.herokuapp.com/"> The website can be view here</a>
 
 ## Purpose
 
@@ -172,13 +172,17 @@ To get set up with a copy of my project you can do these multiple ways.
 
 ## Testing
 
-This project has been tested in many different ways: .
+This project has been tested in many different ways:
     \- I used chrome developer tools to check for errors, responsiveness and test if something was wrong with my html, css or javascript files.
     \- I used Django error page that appeared when my code had any errors, I also use print command at time with specific messages to understand if, for example, data was been aplied.
     \- As well, I used Django built-in test functionality to create automated, custom test. This had allow me to create multiple tests for my views, models, forms...
     \- I also used Travis CI by connecting it trough my Github repo.
     \- I asked friends to test my application and to give me feedback.
     \- Finally I went through lots of manual tests to understand and make sure the functionality of the website was on point.
+
+##### Validation
+
+\- The code has been validated with Flake8.
 
 #### Some of Manual Tests done:
 
@@ -221,6 +225,8 @@ This project has been tested in many different ways: .
 
 \-Being able to rate and review a product works perfectly.
   Successful
+
+\- The code has been validated with Flake8.
 
 ## Credits
 

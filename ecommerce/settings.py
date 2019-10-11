@@ -30,7 +30,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['winebordeaux.herokuapp.com']
 
 
-
 # Application definition
 
 INSTALLED_APPS = [

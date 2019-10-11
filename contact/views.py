@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 from .forms import ContactForm
 
+
 def contact(request):
     template = "contact_page.html"
 
@@ -10,10 +11,10 @@ def contact(request):
 
         if form.is_valid():
             form.save()
-    
+
     else:
         form = ContactForm()
-    
+
     context = {
         'form': form,
     }

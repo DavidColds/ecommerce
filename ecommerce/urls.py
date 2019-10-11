@@ -19,7 +19,6 @@ from home.views import about
 from contact.views import contact
 
 
-
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', all_products, name='index'),

@@ -13,9 +13,10 @@ import stripe
 
 stripe.api_key = settings.STRIPE_SECRET
 
+
 @login_required()
 def checkout(request):
-    if request.method=="POST":
+    if request.method == "POST":
         order_form = OrderForm(request.POST)
         payment_form = MakePaymentForm(request.POST)
 
@@ -30,18 +31,18 @@ def checkout(request):
                 product = get_object_or_404(Product, pk=id)
                 total += quantity * product.price
                 order_line_item = OrderLineItem(
-                    order = order,
-                    product = product,
-                    quantity = quantity
-                    )
+                    order=order,
+                    product=product,
+                    quantity=quantity
+                )
                 order_line_item.save()
 
             try:
                 customer = stripe.Charge.create(
-                    amount = int(total * 100),
-                    currency = "sek",
-                    description = request.user.email,
-                    card = payment_form.cleaned_data['stripe_id'],
+                    amount=int(total * 100),
+                    currency="sek",
+                    description=request.user.email,
+                    card=payment_form.cleaned_data['stripe_id'],
                 )
             except stripe.error.CardError:
                 messages.error(request, "Your card was declined!")
@@ -53,7 +54,8 @@ def checkout(request):
                 messages.error(request, "Unable to take payment")
         else:
             print(payment_form.errors)
-            messages.error(request, "We were unable to take a payment with that card!")
+            messages.error(
+                request, "We were unable to take a payment with that card!")
     else:
         payment_form = MakePaymentForm()
         order_form = OrderForm()

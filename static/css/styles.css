@@ -60,6 +60,7 @@ body, html {
 }
 
 /*   Navbar ----------------------------------- */
+
 .navbar {
   background: #273940;
   font-family: 'Simonetta', sans-serif;
@@ -75,10 +76,6 @@ body, html {
   background: #273940;
 }
 
-#navbar10 {
-  padding: 0%;
-}
-
 .navbar li a {
   color: #D5BF8E !important;
   text-decoration: none;
@@ -87,7 +84,14 @@ body, html {
   font-family: 'Simonetta', sans-serif;
 }
 
-/*   Slider ----------------------------------- */
+.container .navbar-toggler {
+  border-radius: 0px;
+}
+
+
+.navbar-dark .navbar-toggler button {
+  padding: 100px;
+}
 
 /* Parallax ---------------------------------*/
 .parallax-text {
@@ -213,7 +217,6 @@ body, html {
 }
 
 .main input, button {
-  width: 75%;
   border: 2px solid white;
   border-right: 0px;
   font-size: 18px;

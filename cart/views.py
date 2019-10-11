@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, reverse
 from products.models import Product
 
 # Create your views here.
+
+
 def view_cart(request):
     """A View that shows the cart details page"""
     return render(request, "cart.html")
@@ -30,7 +32,6 @@ def adjust_cart(request, id):
         cart[id] = quantity
     else:
         cart.pop(id)
-    
+
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
-    

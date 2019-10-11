@@ -1,5 +1,5 @@
 from django.conf.urls import url, include
-from .views import all_products, product_detail, all_products2,product_review, add_review
+from .views import all_products, product_detail, all_products2, product_review, add_review
 
 
 urlpatterns = [
